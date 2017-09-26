@@ -1,22 +1,30 @@
-function getQuestion(input) {
-    $.ajax({
-        type: "POST",
-        url: "/backend/getquestion.py",
-        data: { param: input },
-        success: callbackFunc
-    });
-}
+// function getQuestion() {
+// 	$.getJSON('backend/app.py', {}, function(data) {
+//         				$(".question").text(data.question);
+//         				alert(data.question)
+//         			})
+// }
 
-function callbackFunc(response) {
-    // do something with the response
-    console.log(response);
-    document.write(response)
-}
+
+// function postFeedback() {
+//     $('.score1').bind('click', function() {
+// 		$.getJSON('http://127.0.0.1:5000/', {
+// 		        	new_notes: $('input[name="notes"]').val(),
+// 		        	id_q: '2',
+// 		        	new_grade: '3'
+// 		      		}, function(data) {
+//         				$(".question").text(data.question);
+//         			}
+//       });
+//       return false;
+//     });
+// };
 
 function main(){
- 	alert('Second alert...');
- 	console.log('in js main');
- 	('.question').text("next question is ...");
-}
+	$.getJSON( 'http://127.0.0.1:5000/', function( data ) {
+	 	alert('Third alert...');
+	 });
+	alert('Second alert...')
+};
 
 $(document).ready(main);

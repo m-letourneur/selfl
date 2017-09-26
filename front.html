@@ -6,7 +6,7 @@
 
 	<body>
 		<h1>		
-			<strong> Selfl module - read, answer, repeat, learn. </strong>
+			<strong> read, answer, repeat, Learn. </strong>
 		</h1>
 
 		<div class='questionBox'>
@@ -45,19 +45,24 @@
 			<p class='currentNotes'>
 				<!-- empty notes so far -->
 				<!-- <input class='notes' type="text" style="width:500px;height:100px"> -->
-				<input class='notes' type="text">
+				<input class='notes' type="text" name='notes'>
 
 			</p>	
 		</div>
 	
 	<script src='https://code.jquery.com/jquery-3.1.0.min.js'></script>
-	<script type="text/javascript"> 
-		$(document).ready($('.question').text("next question is ..."))
+<!-- 	<script type="text/javascript"> 
+		// $(document).ready($('.question').text("next question is ..."))
 		// $(document).ready($('.currentNotes').text(""))
-		$(document).ready($('.notes').text(""))
+		// $(document).ready($('.notes').text(""))
+		 // var data = '{"name": "mkyong","age": 30,"address": {"streetAddress": "88 8nd Street","city": "New York"},"phoneNumber": [{"type": "home","number": "111 111-1111"},{"type": "fax","number": "222 222-2222"}]}';
 
-	</script>
-	<script type="text/javascript" src='/backend/main.js'> </script>
+			// var json = JSON.parse(data);
+
+			// alert(json["name"]); //mkyong
+			// alert(json.name); //mkyong
+	</script> -->
+	<script type="text/javascript" src='backend/main.js'></script>
 	</body>
 
 </html>

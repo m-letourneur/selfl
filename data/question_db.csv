@@ -1,6 +1,6 @@
 id,question,notes,score
-0,What is data science to you?,,-1
-1,Why Python is commonly/widely used now in the community?,,8
-2,Could you explain regularization?,,-1
-3,Could you explain what is variance? bias? And the trade-off between the two?,,4
-4,What is a p-value?,,4
+0,What is data science to you?,void,6
+1,Why Python is commonly/widely used now in the community?,void,8
+2,Could you explain regularization?,void,-1
+3,Could you explain what is variance? bias? And the trade-off between the two?,void,4
+4,What is a p-value?,void,4
