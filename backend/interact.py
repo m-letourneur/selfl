@@ -11,7 +11,7 @@ def getquestion():
 
 	dfc = df.copy()
 	dimension = len(dfc['score'])
-	# Consider the 30% of questions with the lowest grades
+	# Consider the 50% of questions with the lowest grades
 	lg_dim = int(np.floor(0.5 * dimension))
 	# print lg_dim
 	dfc = dfc.sort_values('score', ascending=True)
@@ -23,6 +23,7 @@ def getquestion():
 	# Reset index
 	dfc.reset_index(inplace=True)
 	id_q = dfc.iloc[rint].id
+	print "id_q after reset index in getquestion() = " + str(id_q)
 	question = df.iloc[id_q].question
 
 	# Write changes
