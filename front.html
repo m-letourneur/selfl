@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	  <link rel='stylesheet' type='text/css' href='css/styles.css'>
+	</head>
+
+	<body>
+		<h1>		
+			<strong> Selfl module - read, answer, repeat, learn. </strong>
+		</h1>
+
+		<div class='questionBox'>
+			<h2>
+				The question
+			</h2>
+			<p class='question'>
+				question 1
+			</p>
+			<input class='hint' type="submit" value="hint!">
+
+
+		</div>
+
+		<div class='gradesBox'>
+			<h2>
+				Auto-grading
+			</h2>
+			<input class='score1' type="submit" name='1' value="1">
+			<input class='score1' type="submit" name='2' value="2">
+			<input class='score1' type="submit" name='3' value="3">
+			<input class='score1' type="submit" name='4' value="4">
+			<input class='score1' type="submit" name='5' value="5">
+			<input class='score1' type="submit" name='6' value="6">
+			<input class='score1' type="submit" name='7' value="7">
+			<input class='score1' type="submit" name='8' value="8">
+			<input class='score1' type="submit" name='9' value="9">
+			<input class='score1' type="submit" name='10' value="10">
+
+		</div>
+
+		<div class='notesBox'>
+			<h2>
+				Notes
+			</h2>	
+			<p class='currentNotes'>
+				<!-- empty notes so far -->
+				<!-- <input class='notes' type="text" style="width:500px;height:100px"> -->
+				<input class='notes' type="text">
+
+			</p>	
+		</div>
+	
+	<script src='https://code.jquery.com/jquery-3.1.0.min.js'></script>
+	<script type="text/javascript"> 
+		$(document).ready($('.question').text("next question is ..."))
+		// $(document).ready($('.currentNotes').text(""))
+		$(document).ready($('.notes').text(""))
+
+	</script>
+	<script type="text/javascript" src='/backend/main.js'> </script>
+	</body>
+
+</html>

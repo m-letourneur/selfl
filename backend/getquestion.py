@@ -30,7 +30,9 @@ def getquestion():
 	return question, id_q
 
 if __name__ == '__main__':
-	question, id_q = getquestion() 
-	print question
-	print id_q
+	question, id_q = getquestion()
+	return question, id_q
+	# print question
+	# print id_q
+
 	
