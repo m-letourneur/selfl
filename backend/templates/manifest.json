@@ -7,7 +7,7 @@
 
   "browser_action": {
     "default_icon": "brain.png",
-    "default_popup": "front.html"
+    "default_popup": "front_cext.html"
   },
   "permissions": [
     "activeTab",
