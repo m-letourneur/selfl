@@ -5,17 +5,19 @@
 }
 
 body {
-  font-family: Garamond;
+  font-family: Helvetica;
   padding: 2em;
   background-color: whitesmoke;
 }
 
 h1 {
+  font-family: Helvetica;
   font-size: 2.5em;
   text-align: center;
 }
 
 h2 {
+  font-family: Helvetica;
   font-size: 1.5em;
 }
 

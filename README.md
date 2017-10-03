@@ -1,4 +1,12 @@
-#README
+#SELFL
+
+Lean webpage for a learning framework.
+
+Selection of questions in pool, self-assessment of the user's level to answer the questions. Questions are selected based on previous self-assessed grades so that the user faces its weaknesses more often and work on them until he or she reaches a better grade on these questions.
+
+Status: v1 is live.
+ 
+> basic JavaScript + basic HTML/CSS + Flask API to run Python
 
 ## Run the local server
 
