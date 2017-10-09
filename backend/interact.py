@@ -4,9 +4,10 @@ import pandas as pd
 import numpy as np
 basedir = os.path.abspath(os.path.dirname(__file__))
 
+DB = 'gloss_db.csv'
 
 def getquestion():
-    df = pd.read_csv(basedir + '/../data/gloss_db.csv')
+    df = pd.read_csv(basedir + '/../data/' + DB)
 
     dfc = df.copy()
     dimension = len(dfc['score'])
@@ -25,27 +26,27 @@ def getquestion():
     question = df.iloc[id_q].question
 
     # Write changes
-    df.to_csv(basedir + '/../data/question_db.csv', index=False)
+    df.to_csv(basedir + '/../data/' + DB, index=False)
 
     return question, id_q
 
 
 def collectfeedback(id_q, new_grade, new_notes):
-    df = pd.read_csv(basedir + '/../data/question_db.csv')
+    df = pd.read_csv(basedir + '/../data/' + DB)
 
     # Store the grade for the question
     df.set_value(id_q, 'score', new_grade)
     # Store the notes
     old_notes = df.loc[id_q]['notes']
     upd_notes = old_notes.decode('utf-8') + ' ' + new_notes
-    df.set_value(id_q, 'notes', upd_notes)
+    # df.set_value(id_q, 'notes', upd_notes)
 
 	# Write changes
-    df.to_csv(basedir + '/../data/question_db.csv', index=False)
+    df.to_csv(basedir + '/../data/' + DB, index=False)
 
 
 def gethint(id_q):
-    df = pd.read_csv(basedir + '/../data/question_db.csv')
+    df = pd.read_csv(basedir + '/../data/' + DB)
     notes = df.loc[id_q]['notes']
     return notes
 
