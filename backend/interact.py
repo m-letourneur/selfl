@@ -6,7 +6,7 @@ basedir = os.path.abspath(os.path.dirname(__file__))
 
 
 def getquestion():
-    df = pd.read_csv(basedir + '/../data/question_db.csv')
+    df = pd.read_csv(basedir + '/../data/gloss_db.csv')
 
     dfc = df.copy()
     dimension = len(dfc['score'])
@@ -37,7 +37,7 @@ def collectfeedback(id_q, new_grade, new_notes):
     df.set_value(id_q, 'score', new_grade)
     # Store the notes
     old_notes = df.loc[id_q]['notes']
-    upd_notes = old_notes + ' ' + new_notes
+    upd_notes = old_notes.decode('utf-8') + ' ' + new_notes
     df.set_value(id_q, 'notes', upd_notes)
 
 	# Write changes

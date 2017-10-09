@@ -369,3 +369,210 @@ data set chronicles 15,000 different species, each denoted with a unique
 string identifier. As part of feature engineering, you'll probably encode
 those string identifiers as one-hot vectors in which the vector has a size
 of 15,000.  ",98,-1
+Define what is  one-vs.-all,"   Given a classification problem with N possible solutions, a one-vs.-all
+solution consists of N separatebinary classifiers—one binary classifier for
+each possible outcome. For example, given a model that classifies examples
+as animal, vegetable, or mineral, a one-vs.-all solution would provide the
+following three separate binary classifiers:  animal vs. not animalvegetable vs. not vegetablemineral vs. not mineral  ",99,-1
+Define what is  online inference,   Generatingpredictionson demand. Contrast withoffline inference.  ,100,-1
+Define what is  Operation (op),"   A node in the TensorFlow graph. In TensorFlow, any procedure that creates,
+manipulates, or destroys aTensoris an operation. For
+example, a matrix multiply is an operation that takes two Tensors as
+input and generates one Tensor as output.  ",101,-1
+Define what is  optimizer,"   A specific implementation of thegradient descentalgorithm. TensorFlow's base class for optimizers istf.train.Optimizer.
+Different optimizers (subclasses oftf.train.Optimizer) account for
+concepts such as:  momentum(Momentum)update frequency
+    (AdaGrad= ADAptive GRADient descent;Adam= ADAptive with Momentum; RMSProp)sparsity/regularization
+    (Ftrl)more complex math
+    (Proximal,
+    and others)  You might even imagine anNN-driven optimizer.  ",102,-1
+Define what is  outliers,"   Values distant from most other values. In machine learning, any of the
+following are outliers:  Weightswith high absolute values.Predicted values relatively far away from the actual values.Input data whose values are more than roughly 3 standard deviations
+    from the mean.  Outliers often cause problems in model training.  ",103,-1
+Define what is  output layer,"   The ""final"" layer of a neural network. The layer containing the answer(s).  ",104,-1
+Define what is  overfitting,"   Creating a model that matches thetraining dataso
+closely that the model fails to make correct predictions on new data. ",105,-1
+Define what is  pandas,"   A column-oriented data analysis API. Many ML frameworks, including
+TensorFlow, support pandas data structures as input. Seepandas documentation.  ",106,-1
+Define what is  parameter,"   A variable of a model that the ML system trains on its own. For example,weightsare parameters whose values the ML system gradually
+learns through successive training iterations. Contrast withhyperparameter.  ",107,-1
+Define what is  Parameter Server (PS),"   A job that keeps track of a model'sparametersin a
+distributed setting.  ",108,-1
+Define what is  parameter update,"   The operation of adjusting a model'sparametersduring
+training, typically within a single iteration ofgradient descent.  ",109,-1
+Define what is  partial derivative,"   A derivative in which all but one of the variables is considered a constant.
+For example, the partial derivative off(x, y)with respect toxis the
+derivative offconsidered as a function ofxalone (that is, keepingyconstant). The partial derivative offwith respect toxfocuses only on
+howxis changing and ignores all other variables in the equation.  ",110,-1
+Define what is  partitioning strategy,   The algorithm by which variables are divided acrossparameter servers.  ,111,-1
+Define what is  performance,"   Overloaded term with the following meanings:  The traditional meaning within software engineering. Namely: How fast
+    (or efficiently) does this piece of software run?The meaning within ML. Here, performance answers the following question:
+    How correct is thismodel? That is, how good are the
+    model's predictions?  ",112,-1
+Define what is  perplexity,"   One measure of how well amodelis accomplishing its task.
+For example, suppose your task is to read the first few letters of a word
+a user is typing on a smartphone keyboard, and to offer a list of possible
+completion words. Perplexity, P, for this task is approximately the number
+of guesses you need to offer in order for your list to contain the actual
+word the user is trying to type.  Perplexity is related tocross-entropyas follows:  P=2−crossentropyP= 2^{-cross entropy}  ",113,-1
+Define what is  pipeline,"   The infrastructure surrounding a machine learning algorithm. A pipeline
+includes gathering the data, putting the data into training data files,
+training one or more models, and exporting the models to production.  ",114,-1
+Define what is  positive class,"   Inbinary classification, the two possible
+classes are labeled as positive and negative. The positive outcome is the
+thing we're testing for. (Admittedly, we're simultaneously testing for
+both outcomes, but play along.) For example, the positive class in a
+medical test might be ""tumor."" The positive class in an email classifier
+might be ""spam.""  Contrast withnegative class.  ",115,-1
+Define what is  precision,"   A metric forclassification models. Precision
+identifies the frequency with which a model was correct when predicting thepositive class. That is:  Precision=TruePositivesTruePositives+FalsePositivesPrecision = \frac{True\,Positives} {True\,Positives + False\,Positives}  ",116,-1
+Define what is  prediction,   A model's output when provided with an inputexample.  ,117,-1
+Define what is  prediction bias,   A value indicating how far apart the average ofpredictionsis from the average oflabelsin the data set.  ,118,-1
+Define what is  pre-made Estimator,"   AnEstimatorthat someone has already built.
+TensorFlow provides several pre-made Estimators, includingDNNClassifier,DNNRegressor, andLinearClassifier.  You may build your own
+pre-made Estimators by followingthese instructions.  ",119,-1
+Define what is  pre-trained model,"   Models or model components (such asembeddings) that have
+been already been trained. Sometimes, you'll feed pre-trained embeddings
+into aneural network. Other times, your model will
+train the embeddings itself rather than rely on the pre-trained embeddings.  ",120,-1
+Define what is  prior belief,"   What you believe about the data before you begin training on it. For
+example,L2regularizationrelies on
+a prior belief thatweightsshould be small and normally
+distributed around zero. ",121,-1
+Define what is  queue,"   A TensorFlowOperationthat implements a queue data
+structure. Typically
+used in I/O. ",122,-1
+Define what is  rank,"   Overloaded term in ML that can mean either of the following:  The number of dimensions in aTensor. For instance,
+    a scalar has rank 0, a vector has rank 1, and a matrix has rank 2.The ordinal position of a class in an ML problem that categorizes
+    classes from highest to lowest. For example, a behavior ranking
+    system could rank a dog's rewards from highest (a steak) to
+    lowest (wilted kale).  ",123,-1
+Define what is  rater,"   A human who provideslabelsinexamples.
+Sometimes called an ""annotator.""  ",124,-1
+Define what is  recall,"   A metric forclassification modelsthat answers
+the following question: Out of all the possible positive labels, how many
+did the model correctly identify? That is:  Recall=TruePositivesTruePositives+FalseNegativesRecall = \frac{True\,Positives} {True\,Positives + False\,Negatives}  ",125,-1
+Define what is  Rectified Linear Unit (ReLU),"   Anactivation functionwith the following rules:  If input is negative or zero, output is 0.If input is positive, output is equal to input.  ",126,-1
+Define what is  regression model,"   A type of model that outputs continuous (typically, floating-point) values.
+Compare withclassification models, which
+output discrete values, such as ""day lily"" or ""tiger lily.""  ",127,-1
+Define what is  regularization,"   The penalty on a model's complexity. Regularization helps preventoverfitting. Different kinds of regularization include:  L1regularizationL2regularizationdropout regularizationearly stopping(this is not a formal
+    regularization method, but can effectively limit overfitting)  ",128,-1
+Define what is  regularization rate,"   A scalar value, represented as lambda, specifying the relative importance
+of the regularization function. The following simplifiedlossequation shows the regularization rate's influence:  minimize(loss function +λ(regularization function))\text{minimize(loss function + }\lambda\text{(regularization function))}  Raising the regularization rate reducesoverfittingbut may make the model lessaccurate.  ",129,-1
+Define what is  representation,   The process of mapping data to usefulfeatures.  ,130,-1
+Define what is  ROC (receiver operating characteristic) Curve,   A curve oftrue positive ratevs.false positive rateat differentclassification thresholds. See alsoAUC.  ,131,-1
+Define what is  root directory,"   The directory you specify for hosting subdirectories of the TensorFlow
+checkpoint and events files of multiple models.  ",132,-1
+Define what is  Root Mean Squared Error (RMSE),   The square root of theMean Squared Error. ,133,-1
+Define what is  Saver,   ATensorFlow objectresponsible for saving model checkpoints.  ,134,-1
+Define what is  scaling,"   A commonly used practice infeature engineeringto tame a feature's range of values to match the range of other features in
+the data set. For example, suppose that you want all floating-point features
+in the data set to have a range of 0 to 1. Given a particular feature's
+range of 0 to 500, you could scale that feature by dividing each value
+by 500.  See alsonormalization.  ",135,-1
+Define what is  scikit-learn,   A popular open-source ML platform. Seewww.scikit-learn.org.  ,136,-1
+Define what is  sequence model,"   A model whose inputs have a sequential dependence. For example, predicting
+the next video watched from a sequence of previously watched videos.  ",137,-1
+Define what is  session,"   Maintains state (for example, variables) within a TensorFlow program.  ",138,-1
+Define what is  sigmoid function,"   A function that maps logistic or multinomial regression output (log odds) to
+probabilities, returning a value between 0 and 1.  The sigmoid function has
+the following formula:  y=11+e−σy = \frac{1}{1 + e^{-\sigma}}  whereσ\sigmainlogistic regressionproblems
+is simply:  σ=b+w1x1+w2x2+…wnxn\sigma = b + w_1x_1 + w_2x_2 + … w_nx_n  In other words, the sigmoid function convertsσ\sigmainto a probability
+between 0 and 1.  In someneural networks, the sigmoid function acts as
+theactivation function.  ",139,-1
+Define what is  softmax,"   A function that provides probabilities for each possible class in amulti-class classification model. The probabilities add up
+to exactly 1.0. For example, softmax might determine that the probability of a
+particular image being a dog at 0.9, a cat at 0.08, and a horse at 0.02.
+(Also calledfull softmax.)  Contrast withcandidate sampling.  ",140,-1
+Define what is  sparse feature,"   Featurevector whose values are predominately zero or empty.
+For example, a vector containing a single 1 value and a million 0 values is
+sparse. As another example, words in a search query could also be a
+sparse feature—there are many possible words in a given language, but only a
+few of them occur in a given query.  Contrast withdense feature.  ",141,-1
+Define what is  squared loss,"   Thelossfunction used inlinear regression.  (Also known asL2Loss.) This function calculates the squares of
+the difference between a model's predicted value for a labeledexampleand the actual value of thelabel.
+Due to squaring, this loss function amplifies the influence of bad predictions.
+That is, squared loss reacts more strongly to outliers
+thanL1loss.  ",142,-1
+Define what is  static model,   A model that is trained offline.  ,143,-1
+Define what is  stationarity,"   A property of data in a data set, in which the data distribution stays constant
+across one or more dimensions. Most commonly, that dimension is time, meaning
+that data exhibiting stationarity doesn't change over time. For example, data
+that exhibits stationarity doesn't change from September to December.  ",144,-1
+Define what is  step,   A forward and backward evaluation of onebatch.  ,145,-1
+Define what is  step size,   Synonym forlearning rate.  ,146,-1
+Define what is  stochastic gradient descent (SGD),"   Agradient descentalgorithm in which the batch size
+is one. In other words, SGD relies on a single example chosen uniformly at
+random from a data set to calculate an estimate of the gradient at each step.  ",147,-1
+Define what is  structural risk minimization (SRM),"   An algorithm that balances two goals:  The desire to build the most predictive model (for example, lowest loss).The desire to keep the model as simple as possible (for example, strong
+    regularization).  For example, a model function that minimizes loss+regularization on the
+training set is a structural risk minimization algorithm.  For more information, seehttp://www.svms.org/srm/.  Contrast withempirical risk minimization.  ",148,-1
+Define what is  summary,"   In TensorFlow, a value or set of values calculated at a particularstep, usually used for tracking model metrics during training.  ",149,-1
+Define what is  supervised machine learning,"   Training amodelfrom input data and its correspondinglabels. Supervised machine learning is analogous to a student
+learning a subject by studying a set of questions and their corresponding
+answers.  After mastering the mapping between questions and answers, the
+student can then provide answers to new (never-before-seen) questions on
+the same topic.  Compare withunsupervised machine learning.  ",150,-1
+Define what is  synthetic feature,"   Afeaturethat is not present among the input features, but is
+derived from one or more of them. Kinds of synthetic features include the
+following:  Multiplying one feature by itself or by other feature(s). (These are
+    termedfeature crosses.)Dividing one feature by a second feature.Bucketinga continuous feature into range bins.  Features created bynormalizingorscalingalone are not considered synthetic features. ",151,-1
+Define what is  target,   Synonym forlabel.  ,152,-1
+Define what is  Tensor,"   The primary data structure in TensorFlow programs. Tensors are N-dimensional
+(where N could be very large) data structures, most commonly scalars, vectors,
+or matrices. The elements of a Tensor can hold integer, floating-point,
+or string values.  ",153,-1
+Define what is  Tensor Processing Unit (TPU),"   An ASIC (application-specific integrated circuit) that optimizes the performance
+of TensorFlow programs.  ",154,-1
+Define what is  Tensor rank,   Seerank.  ,155,-1
+Define what is  Tensor shape,"   The number of elements aTensorcontains in various dimensions.
+For example, a [5, 10] Tensor has a shape of 5 in one dimension and 10
+in another.  ",156,-1
+Define what is  Tensor size,"   The total number of scalars aTensorcontains. For example, a
+[5, 10] Tensor has a size of 50.  ",157,-1
+Define what is  TensorBoard,"   The dashboard that displays the summaries saved during the execution of one or
+more TensorFlow programs.  ",158,-1
+Define what is  TensorFlow,"   A large-scale, distributed, machine learning platform. The term also refers to
+the base API layer in the TensorFlow stack, which supports general computation
+on dataflow graphs.  Although TensorFlow is primarily used for machine learning, you may also use
+TensorFlow for non-ML tasks that require numerical computation using
+dataflow graphs.  ",159,-1
+Define what is  TensorFlow Playground,"   A program that visualizes how differenthyperparametersinfluence model
+(primarily neural network) training.
+Go tohttp://playground.tensorflow.orgto experiment with TensorFlow Playground.  ",160,-1
+Define what is  TensorFlow Serving,   A platform to deploy trained models in production.  ,161,-1
+Define what is  test set,   The subset of the data set that you use to test yourmodelafter the model has gone through initial vetting by the validation set. Contrast withtraining setandvalidation set.  ,162,-1
+Define what is  tf.Example,   A standardprotocol bufferfor describing input data for machine learning model training or inference.  ,163,-1
+Define what is  training,"   The process of determining the idealparameterscomprising
+a model.  ",164,-1
+Define what is  training set,   The subset of the data set used to train a model.  Contrast withvalidation setandtest set.  ,165,-1
+Define what is  true negative (TN),"   An example in which the modelcorrectlypredicted thenegative class. For example, the model inferred that
+a particular email message was not spam, and that email message really was
+not spam.  ",166,-1
+Define what is  true positive (TP),"   An example in which the modelcorrectlypredicted thepositive class. For example, the model inferred that
+a particular email message was spam, and that email message really was spam.  ",167,-1
+Define what is  true positive rate (TP rate),"   Synonym forrecall. That is:  TruePositiveRate=TruePositivesTruePositives+FalseNegativesTrue\,Positive\,Rate = \frac{True\,Positives} {True\,Positives + False\,Negatives}  True positive rate is the y-axis in anROC curve. ",168,-1
+Define what is  unlabeled example,"   An example that containsfeaturesbut nolabel.
+Unlabeled examples are the input toinference. In
+semi-supervised and unsupervised learning, unlabeled examples are used
+during training.  ",169,-1
+Define what is  unsupervised machine learning,"   Training amodelto find patterns in a data set, typically an
+unlabeled data set.  The most common use of unsupervised machine learning is to cluster data
+into groups of similar examples. For example, an unsupervised machine
+learning algorithm can cluster songs together based on various properties
+of the music. The resulting clusters can become an input to other machine
+learning algorithms (for example, to a music recommendation service).
+Clustering can be helpful in domains where true labels are hard to obtain.
+For example, in domains such as anti-abuse and fraud, clusters can help
+humans better understand the data.  Another example of unsupervised machine learning isprincipal component analysis
+(PCA).
+For example, applying PCA on a
+data set containing the contents of millions of shopping carts might reveal
+that shopping carts containing lemons frequently also contain antacids.  Compare withsupervised machine learning. ",170,-1
+Define what is  validation set,"   A subset of the data set—disjunct from the training set—that you
+use to adjusthyperparameters.  Contrast withtraining setandtest set. ",171,-1
+Define what is  weight,"   A coefficient for afeaturein a linear model, or an edge
+in a deep network. The goal of training a linear model is to determine
+the ideal weight for each feature. If a weight is 0, then its corresponding
+feature does not contribute to the model.  ",172,-1
